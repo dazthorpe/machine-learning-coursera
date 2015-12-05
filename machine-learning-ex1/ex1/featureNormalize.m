@@ -25,9 +25,13 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
-%mean = mu(X);
-%zigma = std(X);
-%X_norm = (X - repmat(mu, length(X), 1) ./ repmat(sigma, length(X), 1));
+mu = mean(X);
+mu = repmat(mu, size(X)(1), 1);
+sigma = std(X);
+sigma = repmat(sigma, size(X)(1), 1);
+
+X_norm = (X - mu) ./ sigma;
+%X_norm = (X - repmat(mu, size(X)(1), 1) / repmat(sigma, size(X)(1), 1))
 
 % ============================================================
 

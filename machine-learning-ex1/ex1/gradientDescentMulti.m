@@ -16,17 +16,11 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCostMulti) and gradient here.
     %
-
-
-
-
-
-
-
-
-
-
-
+    % θ :=θ−(α/m)XT(Xθ−y)
+    hypothesis = X * theta;
+    theta -= (alpha/m) * (X' * (hypothesis - y));
+    
+    % fprintf("theta(1)=%f; theta(2)=%f; theta(3)=%f\n", theta(1), theta(2), theta(3));  
     % ============================================================
 
     % Save the cost J in every iteration    
